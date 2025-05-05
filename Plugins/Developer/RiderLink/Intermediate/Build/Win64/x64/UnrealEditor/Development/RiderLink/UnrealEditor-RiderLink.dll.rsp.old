@@ -37,6 +37,7 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Module.RiderLink.cpp.obj"
+"D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\PerModuleInline.gen.cpp.obj"
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\UnrealEditor-RD.lib"

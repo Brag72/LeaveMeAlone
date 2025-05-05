@@ -7,6 +7,5 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Module.RiderShaderInfo.cpp.obj"
-"D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\PerModuleInline.gen.cpp.obj"
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\Default.rc2.res"
 /OUT:"D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderShaderInfo\UnrealEditor-RiderShaderInfo.lib"

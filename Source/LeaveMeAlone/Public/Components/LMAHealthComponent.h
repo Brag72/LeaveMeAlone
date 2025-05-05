@@ -9,7 +9,7 @@
 class UDamageType;
 class AController;
 
-DECLARE_MULTICAST_DELEGATE(FOnDeath);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
 DECLARE_MULTICAST_DELEGATE_OneParam(FOnHealthChanged, float);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -48,7 +48,9 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UPROPERTY(BlueprintAssignable)
 	FOnDeath OnDeath;
+	
 	FOnHealthChanged OnHealthChanged;
 	
 	bool AddHealth(float NewHealth);

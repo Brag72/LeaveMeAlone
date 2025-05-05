@@ -7,5 +7,6 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Module.RiderLogging.cpp.obj"
+"D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\PerModuleInline.gen.cpp.obj"
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\Default.rc2.res"
 /OUT:"D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLogging\UnrealEditor-RiderLogging.lib"

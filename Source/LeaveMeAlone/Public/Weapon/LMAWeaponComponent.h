@@ -40,6 +40,8 @@ public:
 	
 	void SpawnWeapon();
 	void Fire();
+
+	UFUNCTION(BlueprintCallable)
 	void StopFire();
 	void OnFire();
 	
@@ -47,4 +49,7 @@ public:
 	void InitAnimNotify();
 	void OnNotifyReloadFinished(USkeletalMeshComponent* SkeletalMesh);
 	bool CanReload() const;
+
+	UFUNCTION(BlueprintCallable)
+	bool GetCurrentWeaponAmmo(FAmmoWeapon& AmmoWeapon) const;
 };

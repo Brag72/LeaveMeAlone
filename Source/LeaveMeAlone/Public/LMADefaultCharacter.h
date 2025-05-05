@@ -36,8 +36,7 @@ private:
 	void OnZoomIn();
 	void OnZoomOut();
 	float ScrollTime = 0.1f;
-
-	void OnDeath();
+	
 	void RotationPlayerOnCursor();
 
 	UFUNCTION(BlueprintCallable)
@@ -51,6 +50,9 @@ protected:
 	virtual void BeginPlay() override;
 
 	void OnHealthChanged(float NewHealth);
+
+	UFUNCTION()
+	void OnDeath();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 	USpringArmComponent* SpringArmComponent;

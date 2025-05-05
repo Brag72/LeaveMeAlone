@@ -7,5 +7,6 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderDebuggerSupport\Module.RiderDebuggerSupport.cpp.obj"
+"D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderDebuggerSupport\PerModuleInline.gen.cpp.obj"
 "D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderDebuggerSupport\Default.rc2.res"
 /OUT:"D:\Unreal Projects\LeaveMeAlone\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderDebuggerSupport\UnrealEditor-RiderDebuggerSupport.lib"

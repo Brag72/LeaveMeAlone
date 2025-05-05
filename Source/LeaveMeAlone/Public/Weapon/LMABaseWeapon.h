@@ -58,4 +58,6 @@ public:
 	void ChangeClip();
 	FAmmoWeapon CurrentAmmoWeapon;
 	FAmmoEmpty AmmoEmpty;
+
+	FAmmoWeapon GetCurrentAmmoWeapon() const {return CurrentAmmoWeapon;}; 
 };
