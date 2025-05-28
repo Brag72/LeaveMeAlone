@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "LMABaseWeapon.h"
+#include "LMA_GrenadeBase.h"
 #include "Components/ActorComponent.h"
 #include "LMAWeaponComponent.generated.h"
 
@@ -30,16 +31,25 @@ protected:
 	ALMABaseWeapon* Weapon = nullptr;
 
 	UPROPERTY(EditDefaultsOnly, Category="Weapon")
+	TSubclassOf<ALMA_GrenadeBase> GrenadeClass;
+
+	UPROPERTY()
+	ALMA_GrenadeBase* Grenade = nullptr;
+
+	UPROPERTY(EditDefaultsOnly, Category="Weapon")
 	UAnimMontage* ReloadMontage;
 
 	FTimerHandle OnFireHandle;
-	
+
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-	
+
+	int32 EquippedGrenades = 0;
+
 	void SpawnWeapon();
 	void Fire();
+	void ThrowGrenade();
 
 	UFUNCTION(BlueprintCallable)
 	void StopFire();

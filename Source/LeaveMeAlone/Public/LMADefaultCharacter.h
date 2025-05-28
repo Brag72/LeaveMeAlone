@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "LMA_GrenadeBase.h"
 #include "GameFramework/Character.h"
 #include "Weapon/LMAWeaponComponent.h"
 #include "LMADefaultCharacter.generated.h"
@@ -103,7 +104,7 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 	ULMAWeaponComponent* WeaponComponent;
-	
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -113,6 +114,9 @@ public:
 
 	UFUNCTION()
 	ULMAHealthComponent* GetHealthComponent() const {return HealthComponent;};
+
+	UFUNCTION()
+	ULMAWeaponComponent* GetWeaponComponent() const {return WeaponComponent;};
 
 	bool OnSprint();
 };

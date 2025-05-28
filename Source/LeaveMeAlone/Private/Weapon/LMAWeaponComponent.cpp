@@ -6,6 +6,7 @@
 #include "Animations/LMAReloadFinishedAnimNotify.h"
 #include "GameFramework/Character.h"
 #include "LMADefaultCharacter.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values for this component's properties
 ULMAWeaponComponent::ULMAWeaponComponent()
@@ -57,6 +58,31 @@ void ULMAWeaponComponent::Fire()
 		GetWorld()->GetTimerManager().SetTimer(OnFireHandle, this, &ULMAWeaponComponent::OnFire, 0.1f, true);		
 	}
 	OnFire();
+}
+
+void ULMAWeaponComponent::ThrowGrenade()
+{
+	if (EquippedGrenades == 0) return;
+	
+	Grenade = GetWorld()->SpawnActor<ALMA_GrenadeBase>(GrenadeClass);
+	if (Grenade)
+	{
+		FHitResult Hit;
+		const auto Character = Cast<ACharacter>(GetOwner());
+		if (Character)
+		{
+			Grenade->SetActorLocation(Character->GetActorLocation());
+			Grenade->SetActorRotation(FRotator (60.0f, Character->GetActorRotation().Yaw, Character->GetActorRotation().Roll));
+			APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+			if (PC)
+			{
+				PC->GetHitResultUnderCursor(ECC_GameTraceChannel1, true, Hit);
+				float Distance = FVector::Dist(Hit.Location, Character->GetActorLocation());
+				Grenade->ScaleImpulse = Distance;
+			}
+		}
+		EquippedGrenades = FMath::Clamp(--EquippedGrenades, 0, EquippedGrenades);
+	}
 }
 
 void ULMAWeaponComponent::StopFire()

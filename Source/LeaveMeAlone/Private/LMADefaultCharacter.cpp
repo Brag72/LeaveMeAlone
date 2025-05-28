@@ -3,6 +3,7 @@
 
 #include "LMADefaultCharacter.h"
 
+#include "LMA_GrenadeBase.h"
 #include "Camera/CameraComponent.h"
 #include "Components/DecalComponent.h"
 #include "Components/LMAHealthComponent.h"
@@ -228,6 +229,7 @@ void ALMADefaultCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, WeaponComponent, &ULMAWeaponComponent::Fire);
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, WeaponComponent, &ULMAWeaponComponent::Reload);
 	PlayerInputComponent->BindAction("Fire", IE_Released, WeaponComponent, &ULMAWeaponComponent::StopFire);
+	PlayerInputComponent->BindAction("ThrowGrenade", IE_Released, WeaponComponent , &ULMAWeaponComponent::ThrowGrenade);
 }
 
 bool ALMADefaultCharacter::OnSprint()

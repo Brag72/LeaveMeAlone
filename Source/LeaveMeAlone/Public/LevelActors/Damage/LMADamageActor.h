@@ -28,13 +28,12 @@ protected:
 	UStaticMeshComponent* StaticMesh;
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Damage")
-	float Damage = 5.0f;
-
-	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Damage")
 	float SphereRadius = 100.0f;
 	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Damage")
+	float Damage = 5.0f;
 };
