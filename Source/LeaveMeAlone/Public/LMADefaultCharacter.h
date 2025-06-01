@@ -119,4 +119,7 @@ public:
 	ULMAWeaponComponent* GetWeaponComponent() const {return WeaponComponent;};
 
 	bool OnSprint();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Inventory")
+	int32 EquippedKey = 0;
 };

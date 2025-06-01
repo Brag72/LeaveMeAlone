@@ -201,13 +201,11 @@ void ALMADefaultCharacter::Tick(float DeltaTime)
 	if (Endurance > 0.0f && bSprintPressed)
 	{
 		ChangeEndurance(false, DeltaTime);
-		UE_LOG(LogTemp, Display, TEXT("%f"), Endurance);
 	}
 
 	if (Endurance < 100.0f && !bSprintPressed)
 	{
 		ChangeEndurance(true, DeltaTime);
-		UE_LOG(LogTemp, Display, TEXT("%f"), Endurance);
 	}
 	
 	if (bSprintPressed)

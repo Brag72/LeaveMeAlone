@@ -15,7 +15,6 @@ AGrenadePickUPs::AGrenadePickUPs()
 void AGrenadePickUPs::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
 bool AGrenadePickUPs::GivePickup(ALMADefaultCharacter* Character)
@@ -51,4 +50,3 @@ void AGrenadePickUPs::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
-

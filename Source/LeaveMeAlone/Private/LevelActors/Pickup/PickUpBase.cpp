@@ -41,4 +41,3 @@ void APickUpBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 }
-
