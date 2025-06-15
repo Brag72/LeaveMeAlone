@@ -57,12 +57,17 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
 	FAmmoWeapon AmmoWeapon {30, 0, true};
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
+	float Damage = 20;
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	void Fire();
 	void Shoot();
+	void MakeDamage(const FHitResult& HitResult);
 
 	void SpawnTrace(const FVector& TraceStart, const FVector& TraceEnd);
 

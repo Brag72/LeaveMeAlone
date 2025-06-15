@@ -10,7 +10,7 @@ void ALMAAIController::OnPossess(APawn* InPawn)
 	Super::OnPossess(InPawn);
 
 	const auto AICharacter = Cast<ALMAEnemyCharacter>(InPawn);
-	if (AICharacter)
+	if (AICharacter && AICharacter->BehaviorTreeAsset)
 	{
 		RunBehaviorTree(AICharacter->BehaviorTreeAsset);
 	}
