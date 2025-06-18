@@ -55,7 +55,7 @@ void ALMABaseWeapon::Shoot()
 		MakeDamage(HitResult);
 		TracerEnd = HitResult.ImpactPoint;
 	}
-	SpawnTrace(TraceStart, TracerEnd);
+	SpawnTrace(TraceStart + WeaponComponent->GetRightVector() * 25, TracerEnd);
 	UGameplayStatics::PlaySoundAtLocation(GetWorld(), ShootWave, TraceStart);
 		
 	DecrementBullets();

@@ -49,7 +49,7 @@ void ALMAHealthPickup::NotifyActorBeginOverlap(AActor* OtherActor)
 	Super::NotifyActorBeginOverlap(OtherActor);
 
 	const auto Character = Cast<ALMADefaultCharacter>(OtherActor);
-	if (GivePickup(Character))
+	if (Character && GivePickup(Character))
 	{
 		PickupWasTaken();
 	}

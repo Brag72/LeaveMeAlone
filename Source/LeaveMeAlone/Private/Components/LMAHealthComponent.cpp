@@ -10,6 +10,8 @@ void ULMAHealthComponent::OnTakeAnyDamage(AActor* DamageActor, float Damage, con
 	
 	Health = FMath::Clamp(Health - Damage, 0.0f, MaxHealth);
 	OnHealthChanged.Broadcast(Health);
+
+	TakeDamage.Broadcast();
 	
 	if (IsDead())
 	{

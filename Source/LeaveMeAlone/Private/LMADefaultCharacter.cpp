@@ -44,12 +44,12 @@ ALMADefaultCharacter::ALMADefaultCharacter()
 
 void ALMADefaultCharacter::MoveForward(float Value)
 {
-	AddMovementInput(GetActorForwardVector(), Value);
+	AddMovementInput(UKismetMathLibrary::Vector_Forward(), Value);
 }
 
 void ALMADefaultCharacter::MoveRight(float Value)
 {
-	AddMovementInput(GetActorRightVector(), Value);
+	AddMovementInput(UKismetMathLibrary::Vector_Right(), Value);
 }
 
 void ALMADefaultCharacter::ZoomCamera()

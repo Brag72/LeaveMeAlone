@@ -10,6 +10,7 @@ class UDamageType;
 class AController;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDeath);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FTakeDamage);
 DECLARE_MULTICAST_DELEGATE_OneParam(FOnHealthChanged, float);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -50,6 +51,9 @@ public:
 
 	UPROPERTY(BlueprintAssignable)
 	FOnDeath OnDeath;
+
+	UPROPERTY(BlueprintAssignable)
+	FTakeDamage TakeDamage;
 	
 	FOnHealthChanged OnHealthChanged;
 	
